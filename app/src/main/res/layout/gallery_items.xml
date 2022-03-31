@@ -15,7 +15,7 @@
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="13dp"
-        app:cardBackgroundColor="@color/grey"
+        app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="15dp"
         app:cardElevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -30,11 +30,11 @@
             <ImageView
                 android:id="@+id/Gimage"
                 android:layout_width="150dp"
-                android:layout_height="129dp"
-                android:layout_marginTop="14dp"
-                android:layout_marginEnd="192dp"
+                android:layout_height="match_parent"
+
+
                 android:layout_marginRight="192dp"
-                android:layout_marginBottom="14dp"
+
                 android:src="@drawable/baseline_image"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -69,7 +69,7 @@
                 android:layout_marginTop="19dp"
                 android:layout_marginEnd="13dp"
                 android:layout_marginRight="13dp"
-                android:fontFamily="@font/roboto_bold"
+
                 android:text="6000"
                 android:textColor="@color/black"
                 android:textSize="20dp"
@@ -87,7 +87,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="15dp"
-                android:fontFamily="@font/roboto_bold"
+
                 android:text="Chair"
                 android:textColor="@color/black"
                 android:textSize="20dp"

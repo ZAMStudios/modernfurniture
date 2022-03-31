@@ -6,6 +6,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/drawable/active_inactive.xml" value="0.1095" />
+        <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/drawable/bg.xml" value="0.1095" />
+        <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/drawable/edit_text_bg.xml" value="0.1095" />
+        <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/layout/activity_add_products.xml" value="0.16032608695652173" />
         <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/layout/activity_admin_login.xml" value="0.16032608695652173" />
         <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/layout/activity_admin_order_report.xml" value="0.16032608695652173" />
         <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/layout/activity_admin_user_report.xml" value="0.16032608695652173" />
@@ -13,11 +17,22 @@
         <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/layout/activity_camera.xml" value="0.16032608695652173" />
         <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/layout/activity_cart.xml" value="0.1" />
         <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/layout/activity_details_page.xml" value="0.16032608695652173" />
-        <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/layout/activity_gallery.xml" value="0.25" />
+        <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/layout/activity_edit_profile.xml" value="0.16032608695652173" />
+        <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/layout/activity_gallery.xml" value="0.18" />
         <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/layout/activity_login.xml" value="0.16032608695652173" />
         <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/layout/activity_profile.xml" value="0.16032608695652173" />
+        <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/layout/activity_wishlist.xml" value="0.16032608695652173" />
+        <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/layout/activity_wishlist_details.xml" value="0.16032608695652173" />
+        <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/layout/cart_items.xml" value="0.16032608695652173" />
+        <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/layout/fragment_define_a_r.xml" value="0.16032608695652173" />
+        <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/layout/gallery_items.xml" value="0.16032608695652173" />
+        <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/layout/layout_list_item.xml" value="0.16032608695652173" />
+        <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/layout/order_items.xml" value="0.16032608695652173" />
+        <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/layout/summary_items.xml" value="0.16032608695652173" />
         <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/layout/user_items.xml" value="0.33" />
         <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/layout/wishlist_items.xml" value="0.16032608695652173" />
+        <entry key="..\:/Android_office_Work/ModernFunitureArCore/app/src/main/res/menu/navigation_items.xml" value="0.2" />
         <entry key="..\:/Users/Atoz/AndroidStudioProjects/ModernFurniture/app/src/main/res/layout/activity_ar.xml" value="0.184375" />
         <entry key="..\:/Users/Atoz/AndroidStudioProjects/ModernFurniture/app/src/main/res/layout/activity_gallery.xml" value="0.184375" />
         <entry key="..\:/Users/Atoz/AndroidStudioProjects/ModernFurniture/app/src/main/res/layout/activity_main.xml" value="0.1" />
