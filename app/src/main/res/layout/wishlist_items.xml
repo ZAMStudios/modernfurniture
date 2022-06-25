@@ -29,10 +29,12 @@
             android:layout_height="match_parent">
 
 
+
+
             <ImageView
                 android:id="@+id/Wimage"
                 android:layout_width="214dp"
-                android:layout_height="137dp"
+                android:layout_height="match_parent"
                 android:layout_marginStart="2dp"
                 android:layout_marginLeft="2dp"
                 android:layout_marginTop="7dp"
@@ -40,29 +42,27 @@
                 android:layout_marginRight="2dp"
                 android:layout_marginBottom="9dp"
                 android:src="@drawable/baseline_image"
-                app:layout_constraintBottom_toTopOf="@+id/Wdelete"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/Wdelete"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="100dp"
-                android:layout_marginLeft="100dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="100dp"
-                android:layout_marginRight="100dp"
-                android:layout_marginBottom="5dp"
-                android:src="@drawable/delete_24"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Wimage" />
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_alignParentEnd="true"
+                android:id="@+id/Wdelete"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/delete_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 

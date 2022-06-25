@@ -46,7 +46,7 @@ public class WishlistDetails extends AppCompatActivity {
             products = (getWishlistData) obj;
         }
 
-        view = findViewById(R.id.W360);
+//        view = findViewById(R.id.W360);
         Img = findViewById(R.id.WDimage);
         quantity = findViewById(R.id.WDquantity);
         name = findViewById(R.id.WDnamefill);
@@ -64,12 +64,12 @@ public class WishlistDetails extends AppCompatActivity {
             type.setText(products.getType());
         }
 
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
-            }
-        });
+//        view.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+//            }
+//        });
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override

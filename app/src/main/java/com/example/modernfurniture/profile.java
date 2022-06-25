@@ -14,6 +14,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -28,19 +33,14 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 public class profile extends AppCompatActivity {
     private static final int GALLERY_INTENT_CODE = 1023 ;
     TextView fullName,email,phone,verifyMsg;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
-    Button resendCode;
-    Button resetPassLocal,changeProfileImage;
+    Button resendCode,changeProfileImage;
+    Button resetPassLocal;
     FirebaseUser user;
     ImageView profileImage;
     StorageReference storageReference;
