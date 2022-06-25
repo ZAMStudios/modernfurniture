@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Filter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -24,12 +25,14 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
     public static class GalleryViewHolder extends RecyclerView.ViewHolder {
         public ImageView mimage;
         public TextView gname,Gprice,gtype;
+        public Button button_buy;
         public GalleryViewHolder(View itemView){
             super(itemView);
             mimage = itemView.findViewById(R.id.Gimage);
             gname = itemView.findViewById(R.id.Gnamefill);
             Gprice = itemView.findViewById(R.id.Gpricefill);
             gtype = itemView.findViewById(R.id.Gtype);
+            button_buy = itemView.findViewById(R.id.button_buy);
 
         }
     }
@@ -49,20 +52,32 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
     @Override
     public void onBindViewHolder(@NonNull GalleryViewHolder holder, int position) {
         Products current = filteredList.get(position);
-        holder.gname.setText(String.valueOf(current.getName()));
-        holder.Gprice.setText(String.valueOf(current.getPrice()));
+        holder.gname.setText("Best "+String.valueOf(current.getName()));
+        holder.Gprice.setText("$"+String.valueOf(current.getPrice()));
         holder.gtype.setText(String.valueOf(current.getType()));
         Picasso.get().load(current.getImageUrl()).into(holder.mimage);
+
+        holder.button_buy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDetailsScreen(v,position);
+
+            }
+        });
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), DetailsPage.class);
-                intent.putExtra("details",filteredList.get(position));
-                v.getContext().startActivity(intent);
+                openDetailsScreen(v,position);
             }
         });
 
+    }
+
+    private void openDetailsScreen(View v,int position){
+        Intent intent = new Intent(v.getContext(), DetailsPage.class);
+        intent.putExtra("details",filteredList.get(position));
+        v.getContext().startActivity(intent);
     }
 
     @Override

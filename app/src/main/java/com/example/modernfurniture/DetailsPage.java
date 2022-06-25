@@ -24,8 +24,8 @@ public class DetailsPage extends AppCompatActivity {
     ImageView back;
     ImageView Img;
     TextView name,price,type,quantity;
-    Button addtoCart, wishlist, view;
-    ImageView add,remove;
+    Button addtoCart, view;
+    ImageView add,remove,wishlist;
     int totalQuntity = 1;
 
     private FirebaseFirestore db;
@@ -60,8 +60,8 @@ public class DetailsPage extends AppCompatActivity {
         //new products
         if(products != null){
             Picasso.get().load(products.getImageUrl()).into(Img);
-            name.setText(products.getName());
-            price.setText(String.valueOf(products.getPrice()));
+            name.setText("Best "+products.getName());
+            price.setText("$"+String.valueOf(products.getPrice()));
             type.setText(products.getType());
         }
 
@@ -118,7 +118,7 @@ public class DetailsPage extends AppCompatActivity {
     }
 
     private void addtoWishlist() {
-        String price2 = price.getText().toString();
+        String price2 = price.getText().toString().replace("$","0");
         String id = UUID.randomUUID().toString();
         final HashMap<String, Object> cartMap = new HashMap<>();
 
@@ -142,7 +142,7 @@ public class DetailsPage extends AppCompatActivity {
 
         String image2 = products.getImageUrl();
         String name2 = name.getText().toString();
-        String price2 = price.getText().toString();
+        String price2 = price.getText().toString().replace("$","0");
         String quantity2 = quantity.getText().toString();
         String id = UUID.randomUUID().toString();
         final HashMap<String, Object> cartMap = new HashMap<>();
