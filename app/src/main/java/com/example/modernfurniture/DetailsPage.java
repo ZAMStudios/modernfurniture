@@ -21,11 +21,11 @@ import java.util.HashMap;
 import java.util.UUID;
 
 public class DetailsPage extends AppCompatActivity {
-    ImageView back;
+    ImageView back, view;
     ImageView Img;
-    TextView name,price,type,quantity;
-    Button addtoCart, view;
-    ImageView add,remove,wishlist;
+    TextView name, price, type, quantity;
+    Button addtoCart;
+    ImageView add, remove, wishlist;
     int totalQuntity = 1;
 
     private FirebaseFirestore db;
@@ -42,7 +42,7 @@ public class DetailsPage extends AppCompatActivity {
 
         final Object obj = getIntent().getSerializableExtra("details");
 
-        if(obj instanceof Products){
+        if (obj instanceof Products) {
             products = (Products) obj;
         }
 
@@ -58,24 +58,26 @@ public class DetailsPage extends AppCompatActivity {
         remove = findViewById(R.id.Dminus);
 
         //new products
-        if(products != null){
+        if (products != null) {
             Picasso.get().load(products.getImageUrl()).into(Img);
-            name.setText("Best "+products.getName());
-            price.setText("$"+String.valueOf(products.getPrice()));
+            name.setText("Best " + products.getName());
+            price.setText("$" + String.valueOf(products.getPrice()));
             type.setText(products.getType());
         }
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                i.putExtra("key", products.getName());
+                startActivity(i);
             }
         });
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(totalQuntity<10){
+                if (totalQuntity < 10) {
                     totalQuntity++;
                     quantity.setText(String.valueOf(totalQuntity));
                 }
@@ -86,7 +88,7 @@ public class DetailsPage extends AppCompatActivity {
         remove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(totalQuntity>1){
+                if (totalQuntity > 1) {
                     totalQuntity--;
                     quantity.setText(String.valueOf(totalQuntity));
                 }
@@ -98,10 +100,10 @@ public class DetailsPage extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),gallery.class));
+                startActivity(new Intent(getApplicationContext(), gallery.class));
             }
         });
-        
+
         addtoCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -118,11 +120,11 @@ public class DetailsPage extends AppCompatActivity {
     }
 
     private void addtoWishlist() {
-        String price2 = price.getText().toString().replace("$","0");
+        String price2 = price.getText().toString().replace("$", "0");
         String id = UUID.randomUUID().toString();
         final HashMap<String, Object> cartMap = new HashMap<>();
 
-        cartMap.put("name",name.getText().toString());
+        cartMap.put("name", name.getText().toString());
         cartMap.put("type", products.getType());
         cartMap.put("image", products.getImageUrl());
         cartMap.put("price", Double.parseDouble(price2));
@@ -133,7 +135,7 @@ public class DetailsPage extends AppCompatActivity {
                 .set(cartMap).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                Toast.makeText(DetailsPage.this,"Added to Wishlist",Toast.LENGTH_SHORT).show();
+                Toast.makeText(DetailsPage.this, "Added to Wishlist", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -142,7 +144,7 @@ public class DetailsPage extends AppCompatActivity {
 
         String image2 = products.getImageUrl();
         String name2 = name.getText().toString();
-        String price2 = price.getText().toString().replace("$","0");
+        String price2 = price.getText().toString().replace("$", "0");
         String quantity2 = quantity.getText().toString();
         String id = UUID.randomUUID().toString();
         final HashMap<String, Object> cartMap = new HashMap<>();
@@ -157,7 +159,7 @@ public class DetailsPage extends AppCompatActivity {
                 .set(cartMap).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                Toast.makeText(DetailsPage.this,"Added to Cart",Toast.LENGTH_SHORT).show();
+                Toast.makeText(DetailsPage.this, "Added to Cart", Toast.LENGTH_SHORT).show();
             }
         });
 
